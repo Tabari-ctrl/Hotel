@@ -1,0 +1,381 @@
+:root {
+  --bg-ivory: #f8efe6;
+  --brand-dark: #0f3f38;
+  --muted: #9b8f86;
+  --accent: #efe6db;
+  --bg-main: #f7efe6;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: #fff;
+}
+
+/* The centered page frame (rounded, shadowed) this manage the main fra the px  */
+.frame {
+  /* choose the desired visible size (keeps the page not-scrollable) */
+  width: min(12000px, 95vw);
+  min-height: (820px, 100vh);
+  margin: auto;
+  margin-top: calc(
+    (100vh - min(820px, 95vh)) / 2
+  ); /* vertically center on large screens */
+  background: #b08d57;
+  border-radius: 8px;
+  box-shadow: 0 25px 60px rgba(20, 20, 20, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+.site-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 20px;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(15, 63, 56, 0.04);
+}
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: var(--brand-dark);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.brand .muted {
+  font-size: 12px;
+  color: var(--muted);
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+/* nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+.nav-link {
+  color: #6e645e;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 8px 6px;
+}
+.nav-link.active {
+  color: #1e3b34;
+  font-weight: 600;
+}
+
+/* phone pill on the right */
+.phone-pill {
+  border-radius: 28px;
+  padding: 10px 20px;
+  border: 1px solid rgba(15, 63, 56, 0.15);
+  background: #f0dfc9;
+  font-size: 13px;
+  color: #1e3b34;
+  cursor: pointer;
+}
+.amenities {
+  background: var(--bg-ivory);
+  color: var(--brand-dark);
+}
+
+/* Hero */
+.amenities-hero {
+  padding: 40px 60px 40px;
+}
+
+.amenities-hero h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.amenities-hero p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Section */
+.amenities-section {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+/* Card */
+.amenity-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.amenity-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.amenity-card h3 {
+  margin: 18px 0 6px;
+  font-size: 20px;
+}
+
+.amenity-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hall Types */
+.hall-types {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.hall-types span {
+  background: #f1ebe2;
+  font-weight: bold;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--brand-dark);
+  line-height: 1.4;
+  flex: 1;
+}
+/* =========================
+   FOOTER INFO
+========================= */
+.about-footer {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.about-footer h4 {
+  font-family: "Playfair Display", serif;
+  color: #5f4633;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.about-footer p {
+  font-size: 14px;
+  color: #5e5e5e;
+  line-height: 1.6;
+}
+
+.contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.contact p img {
+  display: inline-block; /* inline but size-controllable */
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle; /* aligns with text baseline */
+  margin-right: 12px;
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--brand-dark);
+}
+@media (max-width: 768px) {
+  .frame {
+    overflow: visible;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 80%;
+    max-width: 280px;
+    height: 100vh;
+
+    background: #fff;
+    padding: 80px 20px;
+
+    display: flex;
+    flex-direction: column; /* 1×1 layout */
+    gap: 20px;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    z-index: 1000;
+  }
+
+  .main-nav.open {
+    transform: translateX(0);
+  }
+  .phone-pill {
+    display: none;
+  }
+  .nav-link {
+    font-size: 16px;
+    padding: 12px 0;
+    text-align: left;
+  }
+  html,
+  body {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  /* Frame becomes full-width */
+  .frame {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* Header spacing */
+  .site-header {
+    padding: 16px 20px;
+    height: auto;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .brand .muted {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+  .amenities-section {
+    margin: 0 auto 0px;
+  }
+  .amenities-hero {
+    padding: 28px 20px 32px;
+    text-align: left; /* luxury sites rarely center everything */
+  }
+
+  .amenities-hero h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .amenities-hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* FOOTER INFO → STACK */
+  .about-footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-footer h4 {
+    font-size: 20px;
+  }
+
+  .about-footer p {
+    font-size: 13px;
+  }
+
+  /* Contact icons smaller */
+  .contact p img {
+    width: 22px;
+    height: 22px;
+  }
+  .prev,
+  .next {
+    font-size: 28px;
+  }
+
+  .close {
+    font-size: 30px;
+    top: 50px;
+    right: 30px;
+  }
+}

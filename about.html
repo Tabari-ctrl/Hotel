@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" type="image" href="./Asset/icons/favicon.png">
+    <script src="./About.js"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styleAbout.css">
+    <script src="./JS/nav.js"></script>
+    <script src="./JS/About.js"></script>
+</head>
+
+<body>
+    <div class="frame">
+        <header class="site-header">
+            <div class="brand">ORGANO <span class="muted">HOTEL &amp; SUITES</span></div>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <nav class="main-nav">
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="./accommodationPage.html">Accommodations</a>
+                <a class="nav-link active" href="./about.html">About</a>
+                <a class="nav-link" href="./amenities.html">Amenities</a>
+            </nav>
+            <button class="phone-pill">+2347013222755</button>
+        </header>
+<section class="about-section">
+  <!-- Header -->
+  <header class="about-header">
+    
+    <h2>About Organo Hotel</h2>
+    <p>Feel the difference! Safe-Comfortable-Reliable</p>
+  </header>
+
+  <!-- Founder Message -->
+  <div class="about-card founder">
+    <div class="founder-text">
+      <h3>Message from Our Founders</h3>
+      <p>
+        We believe hospitality is more than service — it’s about creating
+        an experience guests want to return to. Every detail at Organo Hotel
+        is designed with care, warmth, and intention.
+      </p>
+    </div>
+
+    <div class="founder-profile">
+      <img src="./Asset/images/founder.png" alt="Founder of Organo Hotel" onclick="openLightbox(0)">
+      <blockquote>
+        “We didn’t build this hotel to impress.
+        We built it so guests would want to return.”
+        <span>—Commodore rtd Muhammadu L Barau min, (PhD). </span>
+      </blockquote>
+    </div>
+  </div>
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+  </div>
+
+  <!-- Guest Experience -->
+  <div class="about-card experience">
+    <div class="experience-info">
+      <h3>Guest Experience & Policies</h3>
+
+    <ul class="policy-list">
+        <li>
+            <img src="./Asset/icons/clock (1).png" alt="Check-In Icon">
+            <div>
+                <strong>Check-In & Check-Out</strong>
+                <span>Check-in at 12:00 PM · Check-out at 12:00 PM</span>
+            </div>
+        </li>
+    
+        <li>
+            <img src="./Asset/icons/cancelled.png" alt="Cancellation Icon">
+            <div>
+                <strong>Cancellation Policy</strong>
+                <span>Free cancellation up to 24 hours before arrival</span>
+            </div>
+        </li>
+    
+        <li>
+            <img src="./Asset/icons/checklist.png" alt="Rules Icon">
+            <div>
+                <strong>House Rules</strong>
+                <span>-Guest should pay for accomodation before going to the room except if there is proper arrangement form the organization. <br></span>
+                <span>-Party is not allowed of any kind in the room. <br></span>
+                <span>-No refund after payment has been made and receipt issued. <br></span>
+                <span>-When a guest misplace his/her key or damage any items of the hotel, the guest have to pay and also write a letter for replacement of the items</span>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+    <div class="map-box">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15659.917665321094!2d7.7105402!3d11.1149108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11b2839b09b0055b%3A0x7e55542d1fa31525!2sOrgano%20Hotel%20and%20Suites!5e0!3m2!1sen!2sng!4v1767870981217!5m2!1sen!2sng" width="600" height="450" style="border:0;"  width="100%" height="400" style="border:0;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      <a href="https://www.google.com/maps/place/Organo+Hotel+and+Suites,+19B+Hanwa+Rd,+GRA,+Zaria+810103,+Kaduna/@11.1149108,7.7105402,15z/data=!4m6!3m5!1s0x11b2839b09b0055b:0x7e55542d1fa31525!8m2!3d11.1149108!4d7.7105402!16s%2Fg%2F11f1z5fvj2?utm_campaign=ml-ardl-ahc_2025&g_ep=Eg1tbF8yMDI1MTIwOF8wIJvbDyoASAJQAQ%3D%3D" class="map-btn">Open in Google Maps</a>
+    </div>
+  </div>
+
+  <!-- Bottom Info -->
+  <div class="about-footer">
+    <div class="location">
+      <h4>Our Location</h4>
+      <p>
+        Situated in the heart of the city, Organo Hotel is conveniently
+        located for easy access to local attractions and business centers. It is located at<br>
+        Plot.35/19bHanwa Road, GRA, Sabon-Gari Zaria.
+      </p>
+    </div>
+
+    <div class="contact">
+      <h4>Contact Us</h4>
+      <p> <img src="./Asset/icons/phone-call.png" alt="phone">+2347013222755</p>
+      <p> <img src="./Asset/icons/add.png" alt="mail">organohotelandsuites@gmail.com</p>
+    </div>
+  </div>
+</section>
+    </div>
+</body>
+
+</html>

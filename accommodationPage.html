@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommdation</title>
+    <link rel="icon" type="image" href="./Asset/icons/favicon.png">
+    
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/styelAccommodation.css">
+    <script src="./JS/accomodation.js"></script>
+    <script src="./JS/nav.js"></script>
+</head>
+<body>
+    <!-- Mian Frame-->
+    <div class="frame">
+        <header class="site-header">
+            <div class="brand">ORGANO <span class="muted">HOTEL &amp; SUITES</span></div>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <nav class="main-nav">
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link active" href="./accommodationPage.html">Accommodations</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link" href="./amenities.html">Amenities</a>
+            </nav>
+            <button class="phone-pill">+2347013222755</button>
+        </header>
+    <section class="accommodation-section">
+    
+        <div class="accommodation-header">
+            <h2>Accommodations</h2>
+            <p>Feel the difference! Safe-Comfortable-Reliable</p>
+        </div>
+    
+        <!-- Room GALLERY -->
+         <div class="gallery-header">
+            <h4>ROOM GALLERY</h4>
+         </div>
+        <div class="gallery">
+            <img src="./Asset/images/Luxury.jpg" alt="LuxuryRoom" onclick="openLightbox(0)">
+            <img src="./Asset/images/Standard.jpg" alt="StandardRoom" onclick="openLightbox(1)">
+            <img src="./Asset/images/Deluxe.jpg" alt="DeluxeRoom" onclick="openLightbox(2)">
+        </div>
+        
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+        <!-- MAIN CONTENT -->
+        <div class="about-card accommodation-layout">
+    
+            <!-- Room List-->
+        <div class="room-info">
+            <h3>Choose Your Ideal Room</h3>
+            <p class="intro">
+                At Organo Hotel & Suites, we offer a range of elegant and comfortable
+                rooms to suit your needs:
+            </p>
+        
+            <ul class="room-list">
+                <li>
+                    <strong>Standard Room:</strong>
+                    Cozy and comfortable, with all the essentials for a pleasant stay.
+                    This is the starting room category in our hotel, designed for guests who value simplicity and comfort.
+                     We have one
+                    Standard Rooms on each floor, making it our most accessible and budget-friendly option. It’s the perfect choice for
+                    short stays and everyday travel needs.<strong> ₦40,000 / Night</strong>
+                </li>
+                <li>
+                    <strong>Deluxe Room:</strong>
+                    Extra space and premium amenities for a touch of elegance.
+                    Larger than our Standard Room, this category offers added comfort and sophistication. Designed for guests who enjoy a
+                    little more luxury, it features a private bathtub, enhanced furnishings, and a more spacious layout — ideal for
+                    relaxation after a long day.<strong> ₦45,000 / Night</strong>
+                </li>
+                <li>
+                    <strong>Luxury Suite:</strong>
+                    The pinnacle of opulence, featuring top-tier amenities and refined living spaces.
+                    This is our most prestigious room and the one we are truly proud of. It offers a separate living room, a larger luxury
+                    bathtub, and two private toilets, delivering unmatched comfort, privacy, and elegance. Thoughtfully designed for guests
+                    who expect nothing but the best, this room represents the highest standard of our hospitality.
+                    <strong> ₦65,000 / Night</strong>
+                </li>
+            </ul>
+        </div>
+    
+    
+            <!-- RIGHT -->
+            <!-- Reservation form -->
+            <div class="booking-box">
+                <h4>Reserve Your Stay:</h4>
+    
+                <form id="bookingForm" 
+                action="https://formspree.io/f/xbdlnqqn"
+                method="POST"
+                >
+                    <div class="booking-form">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" required>
+                
+                        <label>Full Name *</label>
+                        <input type="text" name="name" required>
+                
+                        <div class="date-row">
+                            <div>
+                                <label>Check-In Date *</label>
+                                <input type="date" name="checkin" id="checkin" required>
+                            </div>
+                
+                            <div>
+                                <label>Check-Out Date *</label>
+                                <input type="date" name="checkout" id="checkout" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4>Room Type:</h4>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="room" value="Standard Room" required>
+                            Standard Room
+                        </label>
+                
+                        <label>
+                            <input type="radio" name="room" value="Deluxe Room">
+                            Deluxe Room
+                        </label>
+                
+                        <label>
+                            <input type="radio" name="room" value="Luxury Suite">
+                            Luxury Suite
+                        </label>
+                    </div>
+                
+                    <div class="btn-wrap">
+                        <button class="submit-btn" type="submit">Make Reservation</button>
+                    </div>
+                    <!-- Toast container -->
+                    <div id="toast-container"></div>
+                    
+                    
+                    <script src="./JS/toast.js"></script>
+                </form>
+            </div>
+    
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>

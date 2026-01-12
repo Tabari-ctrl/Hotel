@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities</title>
+    <link rel="icon" type="image" href="./Asset/icons/favicon.png">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styelAmenities.css">
+    <script src="./JS/amenities.js"></script>
+    <script src="./JS/nav.js"></script>
+</head>
+
+<body>
+    <!-- Mian Frame-->
+    <div class="frame">
+        <header class="site-header">
+            <div class="brand">ORGANO <span class="muted">HOTEL &amp; SUITES</span></div>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <nav class="main-nav">
+                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="./accommodationPage.html">Accommodations</a>
+                <a class="nav-link" href="./about.html">About</a>
+                <a class="nav-link active" href="./amenities.html">Amenities</a>
+            </nav>
+            <button class="phone-pill">+2347013222755</button>
+        </header>
+    
+    <div class="amenities">
+            <!-- Hero -->
+            <section class="amenities-hero">
+                <h2>Amenities</h2>
+                <p>Experience luxury and comfort with our world-class amenities.</p>
+            </section>
+            
+            <!-- Amenities Grid -->
+            <section class="amenities-section">
+            
+                <!-- Pool -->
+                <div class="amenity-card">
+                    <img src="./Asset/images/pool.jpg" alt="Swimming Pool" onclick="openLightbox(0)">
+                    <h3>Swimming Pool</h3>
+                    <p>Relax and unwind at our beautiful outdoor pool.
+                    <br>Tickets are available from ₦2,000, Our pool is also available for private rentals, perfect for barbecues (BBQ), small gatherings, and exclusive hangouts,
+                    For reservations and inquiries, kindly reach out through any of 
+                    our contact channels.
+                    </p>
+                </div>
+            
+                <!-- Event & Conference -->
+                <div class="amenity-card">
+                    <img src="./Asset/images/Hall2.jpg" alt="Event Hall" onclick="openLightbox(1)">
+                    <h3>Event & Conference Rooms</h3>
+                    <p>Versatile venues for meetings, tea parties, and grand events. 
+                    For reservations and inquiries, kindly reach out through any of our contact channels.
+                    </p>
+            
+                    <div class="hall-types">
+                        <span>Conference Hall<br>50–60 attendees</span>
+                        <span>Banquet Hall<br>100–120 guests</span>
+                        <span>Event Hall<br>300–450 guests</span>
+                    </div>
+                </div>
+            
+                <!-- Dining -->
+                <div class="amenity-card">
+                    <img src="./Asset/images/Dining.jpg" alt="Fine Dining" onclick="openLightbox(2)">
+                    <h3>Fine Dining</h3>
+                    <p>Delight in exquisite cuisine crafted by our top chefs. Our chefs 
+                        don’t just prepare meals to satisfy your hunger — they craft experiences that nourish the soul.</p>
+                </div>
+            
+                <!-- Bar -->
+                <div class="amenity-card">
+                    <img src="./Asset/images/Bar.jpg" alt="Bar & Lounge" onclick="openLightbox(3)">
+                    <h3>Bar & Lounge</h3>
+                    <p>Enjoy premium drinks in a refined and relaxing atmosphere,
+                    our space is also available for private rentals, perfect for celebrations, 
+                    and exclusive events. For reservations and inquiries, kindly reach out through any of our contact channels.</p>
+                </div>
+                <div id="lightbox" class="lightbox">
+                    <span class="close" onclick="closeLightbox()">&times;</span>
+                    <img id="lightbox-img" src="">
+                    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+                    <a class="next" onclick="changeImage(1)">&#10095;</a>
+                </div>
+            
+            </section>
+            <!-- Bottom Info -->
+            <div class="about-footer">
+                <div class="location">
+                    <h4>Our Location</h4>
+                    <p>
+                        Situated in the heart of the city, Organo Hotel is conveniently
+                        located for easy access to local attractions and business centers. It is located at<br>
+                        Plot.35/19b Hanwa Road, GRA, Sabon-Gari Zaria.
+                    </p>
+                </div>
+            
+                <div class="contact">
+                    <h4>Contact Us</h4>
+                    <p> <img src="./Asset/icons/phone-call.png" alt="phone">+2347013222755</p>
+                    <p> <img src="./Asset/icons/add.png" alt="mail">organohotelandsuites@gmail.com</p>
+                </div>
+            </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
