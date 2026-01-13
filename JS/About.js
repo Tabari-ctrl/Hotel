@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const images = [
-    "./Asset/images/founder.png"
+    "./Asset/images/founder.png",
+    "./Asset/images/MD.jpg"
   ];
 
   let current = 0;
